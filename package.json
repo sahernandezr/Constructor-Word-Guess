@@ -1,0 +1,26 @@
+{
+  "name": "constructor-word-guess",
+  "version": "1.0.0",
+  "description": "constructor word guessing game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahernandezr/Constructor-Word-Guess.git"
+  },
+  "keywords": [
+    "node",
+    "constructor\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D"
+  ],
+  "author": "Sandra Hernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sahernandezr/Constructor-Word-Guess/issues"
+  },
+  "homepage": "https://github.com/sahernandezr/Constructor-Word-Guess#readme",
+  "dependencies": {
+    "inquirer": "^7.0.0"
+  }
+}
