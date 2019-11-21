@@ -5,39 +5,30 @@ var Letter = require("./letter.js");
 function Word(word) {
     this.word = word;
     this.letterArray = [];
-
-    for (var i = 0; i < word.length; i++) {
-        if (word[i] === " ") {
-            this.letterArray.push(" ");
-        }
-        else {
-            var newLetter = new Letter(this.word[i]);
-            this.letterArray.push(newLetter);
-        }
-    }
-
-    this.toString = function () {
-        var wordString = "";
-
-        this.letterArray.forEach(function (value) {
-            if (value === " ") {
-                wordString += " ";
+    this.makeWord = function () {
+        for (var i = 0; i < word.length; i++) {
+            if (word[i] === " ") {
+                this.letterArray.push(" ");
             }
             else {
-                wordString += value.showLetter();
+                var newLetter = new Letter(this.word[i]);
+                this.letterArray.push(newLetter);
             }
-        })
-
-        return wordString;
-
+        }
     }
 
-    this.checkGuess = function (value) {
-        this.lettersArray.forEach(function (value) {
-            if (element.letter !== undefined) {
-                element.checkGuess(letterGuess);
-            }
-        })
+    this.show = function () {
+        var wordString = "";
+        for (var i = 0; i < this.letterArray.length; i++) {
+            wordString += this.letterArray[i] + " ";
+        }
+        console.log(wordString + "\n----------\n");
+    };
+
+    this.checkGuess = function (choice) {
+        for (var i = 0; i < this.letterArray.length; i++) {
+            this.letterArray[i].guess(choice);
+        }
     }
 
 }

@@ -1,10 +1,10 @@
 //Letter constructor
 
-function Letter(letra) {
-    this.letter = letra;
+function Letter(letter) {
+    this.letter = letter;
     this.guessed = false;
 
-    this.showLetter = function () {
+    this.toString = function () {
         //for words with spaces
         if (this.letter === " ") {
             this.guessed=true;
