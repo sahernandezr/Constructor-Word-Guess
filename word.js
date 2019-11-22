@@ -17,17 +17,20 @@ function Word(word) {
         }
     }
 
-    this.show = function () {
-        var wordString = "";
+    this.showWord = function (letter) {
+	var rightAnswer= false;
         for (var i = 0; i < this.letterArray.length; i++) {
-            wordString += this.letterArray[i] + " ";
+		if (this.letterArray[i].showLetter(letter)) {
+		rightAnswer= true;
+}
+            
         }
-        console.log(wordString + "\n----------\n");
+        console.log("\n----------\n");
     };
 
-    this.checkGuess = function (choice) {
+    this.checkWord = function (choice) {
         for (var i = 0; i < this.letterArray.length; i++) {
-            this.letterArray[i].guess(choice);
+            this.letterArray[i].checkLetter(choice);
         }
     }
 

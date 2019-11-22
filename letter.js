@@ -4,7 +4,7 @@ function Letter(letter) {
     this.letter = letter;
     this.guessed = false;
 
-    this.toString = function () {
+    this.showLetter = function () {
         //for words with spaces
         if (this.letter === " ") {
             this.guessed=true;
@@ -20,7 +20,7 @@ function Letter(letter) {
         }
     };
 
-    this.checkGuess = function (userGuess) {
+    this.checkLetter = function (userGuess) {
         //if the letter the user guesses is the correct letter
         if (userGuess === this.letter) {
             this.guessed = true;
